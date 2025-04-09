@@ -1,0 +1,43 @@
+######################### Macro file for Simple geometry for Testing Phys_geo   #########################
+#
+#=======================  PATHS FOR INPUTS          ======================
+#
+## if don't set semi-lengths for world Box, code will use the sizes 
+## of cell nucleus for calculating: WorldSemiXY = 2*SemiXY, WorldSemiZ = SemiZ.
+/dsbandrepair/det/worldBoxSizes 100 100 100 um  # Set WorldSemiX, WorldSemiY, WorldSemiZ for world box;
+#100 100 0.6 um
+/dsbandrepair/det/celldefinitionfile        ../Source/dnafabric_geometries/G_Value.fab2g4dna
+
+/dsbandrepair/det/voxeldefinitionfile       ../Source/dnafabric_geometries/VoxelEmpty.fab2g4dna
+
+#
+#=======================  CHOOSING DNA PHYSICSLIST  ======================
+#
+/dsbandrepair/phys/physicsList G4EmDNAPhysics_option2
+#
+#=======================  INITIALIZE   RUNMANAGER   ======================
+#
+/run/initialize
+#
+#=======================  BEAM SPATIAL DISTRIBUTION ======================
+# beam profile: Parallel, circle
+# See cell-definition file for setting dimensions below:
+/gps/pos/type Point
+#/gps/pos/shape Circle
+#/gps/pos/radius 80 nm
+/gps/pos/centre 0. 0. -500 nm
+/gps/direction 0 0 1
+#/gps/number 4
+#
+#=======================  SET PARTICLE'S INFO       ======================
+# 
+
+
+/gps/particle e-
+/gps/energy 0.999 MeV
+#
+#=======================  SET EVENTS and START A RUN  ======================
+#
+/run/printProgress 10 # Print progress for each mpi process
+/run/beamOn 1
+
