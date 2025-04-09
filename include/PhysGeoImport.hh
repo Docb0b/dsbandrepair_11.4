@@ -99,6 +99,7 @@ struct Voxel
         Right2,
         Up2,
         Down2,
+        Empty,
         Other
     };
 

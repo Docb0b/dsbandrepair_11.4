@@ -232,6 +232,7 @@ G4int SteppingAction::SetupVolumeFlag(const G4String& volumeName)
     else if(volumeName=="voxelLeft" || volumeName=="VoxelLeft") flagVolume = 163;
     else if(volumeName=="voxelUp" || volumeName=="VoxelUp") flagVolume = 164;
     else if(volumeName=="voxelDown" || volumeName=="VoxelDown") flagVolume = 165;
+    else if(volumeName=="voxelEmpty" || volumeName=="VoxelEmpty") flagVolume = 166;
     else if(volumeName=="voxelStraight2" || volumeName=="VoxelStraight2") flagVolume = 261;
     else if(volumeName=="voxelRight2" || volumeName=="VoxelRight2") flagVolume = 262;
     else if(volumeName=="voxelLeft2" || volumeName=="VoxelLeft2") flagVolume = 263;
@@ -262,6 +263,7 @@ void SteppingAction::SetupVoxelCopyNumber(const G4Step* step)
             || volPost == "VoxelLeft" || volPost=="voxelLeft"
             || volPost == "VoxelUp" || volPost=="voxelUp"
             || volPost == "VoxelDown" || volPost=="voxelDown"
+            || volPost == "VoxelEmpty" || volPost=="voxelEmpty"
             || volPost == "VoxelStraight2" || volPost=="voxelStraight2"
             || volPost == "VoxelRight2" || volPost=="voxelRight2"
             || volPost == "VoxelLeft2" || volPost=="voxelLeft2"

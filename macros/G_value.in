@@ -6,9 +6,9 @@
 ## of cell nucleus for calculating: WorldSemiXY = 2*SemiXY, WorldSemiZ = SemiZ.
 /dsbandrepair/det/worldBoxSizes 100 100 100 um  # Set WorldSemiX, WorldSemiY, WorldSemiZ for world box;
 #100 100 0.6 um
-/dsbandrepair/det/celldefinitionfile        ../Source/dnafabric_geometries/G_Value.fab2g4dna
+/dsbandrepair/det/celldefinitionfile        dnafabric_geometries/G_Value.fab2g4dna
 
-/dsbandrepair/det/voxeldefinitionfile       ../Source/dnafabric_geometries/VoxelEmpty.fab2g4dna
+/dsbandrepair/det/voxeldefinitionfile       dnafabric_geometries/VoxelEmpty.fab2g4dna
 
 #
 #=======================  CHOOSING DNA PHYSICSLIST  ======================

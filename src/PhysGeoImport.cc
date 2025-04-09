@@ -869,7 +869,7 @@ std::vector<Voxel>* PhysGeoImport::CreateVoxelsData(const G4String& fileName)
 
     auto whatchromatintype = [] (Voxel::VoxelType voxt) -> ChromatinType {
         if (voxt == Voxel::Straight || voxt == Voxel::Left || voxt == Voxel::Right ||
-            voxt == Voxel::Up || voxt == Voxel::Down) return ChromatinType::fHeterochromatin;
+            voxt == Voxel::Up || voxt == Voxel::Down || voxt == Voxel::Empty) return ChromatinType::fHeterochromatin;
         else if (voxt == Voxel::Straight2 || voxt == Voxel::Left2 || voxt == Voxel::Right2 ||
             voxt == Voxel::Up2 || voxt == Voxel::Down2) return ChromatinType::fEuchromatin;
         else return ChromatinType::fUnspecified;   
@@ -971,6 +971,10 @@ std::vector<Voxel>* PhysGeoImport::CreateVoxelsData(const G4String& fileName)
             else if(name=="voxelLeft" || name=="VoxelLeft")
             {
                 type = Voxel::Left;
+            }
+            else if(name=="voxelEmpty" || name=="VoxelEmpty")
+            {
+                type = Voxel::Empty;
             }
             else if(name=="voxelStraight2" || name=="VoxelStraight2")
             {

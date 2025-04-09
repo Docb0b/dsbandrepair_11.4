@@ -106,7 +106,7 @@ G4VPhysicalVolume * DetectorConstruction::ConstructFullCellNucleusGeo()
     new G4PVPlacement(0, G4ThreeVector(), logicNucleus, "nucleus_pl", fLogicWorld, false, false);
   
     G4LogicalVolume* logicStraightVoxel{nullptr}, *logicUpVoxel{nullptr}, *logicDownVoxel{nullptr}, 
-                        *logicLeftVoxel{nullptr},*logicRightVoxel{nullptr};
+                        *logicLeftVoxel{nullptr},*logicRightVoxel{nullptr}, *logicEmptyVoxel{nullptr};
     G4LogicalVolume* logicStraightVoxel2{nullptr},*logicUpVoxel2{nullptr},*logicDownVoxel2{nullptr}
                         , *logicLeftVoxel2{nullptr},*logicRightVoxel2{nullptr};
     
@@ -132,6 +132,10 @@ G4VPhysicalVolume * DetectorConstruction::ConstructFullCellNucleusGeo()
         if (name=="voxelLeft" || name=="VoxelLeft") {
             logicLeftVoxel = ptemp;
             voxelMap["VoxelLeft"] = logicLeftVoxel;
+        }
+        if (name=="voxelEmpty" || name=="VoxelEmpty") {
+            logicEmptyVoxel = ptemp;
+            voxelMap["VoxelEmpty"] = logicEmptyVoxel;
         }
         if (name=="voxelStraight2" || name=="VoxelStraight2") {
             logicStraightVoxel2 = ptemp;

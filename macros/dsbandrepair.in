@@ -40,5 +40,5 @@
 #=======================  SET EVENTS and START A RUN  ======================
 #
 /run/printProgress 10 # Print progress for each mpi process
-/run/beamOn 5
+/run/beamOn 10
 

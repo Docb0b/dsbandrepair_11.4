@@ -77,6 +77,8 @@ G4LogicalVolume* VoxelParameterisation::LogicalVoxel(Voxel::VoxelType type) cons
         voxel =fVoxelMap.at("VoxelUp");
     else if(type==Voxel::Down)
         voxel =fVoxelMap.at("VoxelDown");
+    else if(type==Voxel::Empty)
+        voxel =fVoxelMap.at("VoxelEmpty");
     else if(type==Voxel::Straight2)
         voxel = fVoxelMap.at("VoxelStraight2");
     else if(type==Voxel::Right2)
@@ -120,6 +122,8 @@ G4String VoxelParameterisation::VoxelName(Voxel::VoxelType type) const
         name = "VoxelUp";
     else if(type==Voxel::Down)
         name = "VoxelDown";
+    else if(type==Voxel::Empty)
+        name = "VoxelEmpty";
     else if(type==Voxel::Straight2)
         name = "VoxelStraight2";
     else if(type==Voxel::Right2)

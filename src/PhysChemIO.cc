@@ -67,6 +67,7 @@ void PhysChemIO::CreateWaterMolecule(G4int electronicModif, G4int electronicLeve
         || volumeFlag == 163 // voxelLeft
         || volumeFlag == 164 // voxelUp
         || volumeFlag == 165 // voxelDown
+        || volumeFlag == 166 // voxelEmpty
         || volumeFlag == 261  // voxelStraight2
         || volumeFlag == 262 // voxelRight2
         || volumeFlag == 263 // voxelLeft2
@@ -144,6 +145,7 @@ void PhysChemIO::CreateSolvatedElectron(const G4Track* theIncomingTrack, G4Three
         || volumeFlag == 163 // voxelLeft
         || volumeFlag == 164 // voxelUp
         || volumeFlag == 165 // voxelDown
+        || volumeFlag == 166 // voxelEmpty
         || volumeFlag == 261  // voxelStraight2
         || volumeFlag == 262 // voxelRight2
         || volumeFlag == 263 // voxelLeft2

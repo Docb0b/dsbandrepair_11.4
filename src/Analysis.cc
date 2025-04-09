@@ -202,6 +202,7 @@ void Analysis::UpdateChemInputDataAndFillNtuple()
             || binfo.fVolume == 163 // voxelLeft
             || binfo.fVolume == 164 // voxelUp
             || binfo.fVolume == 165 // voxelDown
+            || binfo.fVolume == 166 // voxelEmpty
             || binfo.fVolume == 261 // voxelStraight2
             || binfo.fVolume == 262 // voxelRight2
             || binfo.fVolume == 263 // voxelLeft2
@@ -217,6 +218,7 @@ void Analysis::UpdateChemInputDataAndFillNtuple()
             else if(binfo.fVolume==163) voxelName = "VoxelLeft";
             else if(binfo.fVolume==164) voxelName = "VoxelUp";
             else if(binfo.fVolume==165) voxelName = "VoxelDown";
+            else if(binfo.fVolume==166) voxelName = "VoxelEmpty";
             else if(binfo.fVolume==261) voxelName = "VoxelStraight2";
             else if(binfo.fVolume==262) voxelName = "VoxelRight2";
             else if(binfo.fVolume==263) voxelName = "VoxelLeft2";
